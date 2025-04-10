@@ -1,6 +1,6 @@
-name: The name of your action here
-description: Provide a description here
-author: Your name or organization here
+name: 'Linear Label'
+description: 'Add a label to a Linear issue'
+author: 'Clio'
 
 # Add your action's branding here. This will appear on the GitHub Marketplace.
 branding:
@@ -9,15 +9,19 @@ branding:
 
 # Define your inputs here.
 inputs:
-  milliseconds:
-    description: Your input description here
+  linear-api-key:
+    description: 'Your Linear API key'
     required: true
-    default: '1000'
-
-# Define your outputs here.
-outputs:
-  time:
-    description: Your output description here
+  linear-label:
+    description: 'The label to add to the issue'
+    required: true
+  existing-label:
+    description: 'The label to use to find the issues to be updated'
+    required: true
+  remove-existing:
+    description: 'Remove the existing label from the issue'
+    required: false
+    default: 'false'
 
 runs:
   using: node20

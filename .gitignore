@@ -1,3 +1,7 @@
+# Files from the dev tool: https://github.com/clio/dev
+dev-error.log
+.dev-metrics.log
+
 # Dependency directory
 node_modules
 

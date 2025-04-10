@@ -1,0 +1,13 @@
+tier: 4 # https://themis.atlassian.net/wiki/spaces/INF/pages/558040595/Application+Tiers
+owner: # The github username of the individual responsible for the repo (no @ prefix needed). Ex. joekrump
+classification: # Type of project contained in the repo. Valid values:
+  #   [application, cli, infrastructure, library, meta]
+team: # The github team responsible for the repo, pull this from the team url:
+  # (e.g. https://github.com/orgs/clio/teams/application-security)
+slack_name: # The slack channel name for communication with the team (e.g. "#dept-developers")
+backlog_url: # Single url where feature development is planned
+exceptions_url: # Single url where exceptions can be viewed
+deploy_url: # Single url for deploying changes
+monitoring_url: # Single url where the health of the running project is monitored
+playbooks_url: # Documentation on how to fix service errors
+oncall_url: # Oncall schedule

@@ -1,4 +1,16 @@
 version: 2
+
+registries:
+  rubygems-github:
+    type: rubygems-server
+    url: https://rubygems.pkg.github.com/clio
+    token: ${{ secrets.DEPENDABOT_GITHUB_TOKEN }}
+  npm-jfrog:
+    type: npm-registry
+    url: https://clio.jfrog.io/clio/api/npm/product-npm-prod
+    username: ${{secrets.ARTIFACTORY_USERNAME}}
+    password: ${{secrets.ARTIFACTORY_API_KEY}}
+
 updates:
   - package-ecosystem: github-actions
     directory: /
@@ -28,3 +40,16 @@ updates:
         dependency-type: production
         update-types:
           - patch
+  - package-ecosystem: 'bundler'
+    directory: '/'
+    vendor: true
+    insecure-external-code-execution: allow
+    registries: '*'
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 2
+  - package-ecosystem: 'pip'
+    directory: '/'
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 2

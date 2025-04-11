@@ -73,7 +73,7 @@ export async function run(): Promise<void> {
     }
 
     // Remove the old label (if requested)
-    const shouldRemoveOldLabel = core.getInput('remove-old-label') === 'true'
+    const shouldRemoveOldLabel = core.getInput('remove-existing') === 'true'
     console.log(`Should remove the old label: ${shouldRemoveOldLabel}`)
 
     if (shouldRemoveOldLabel) {

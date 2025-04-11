@@ -27305,7 +27305,7 @@ async function run() {
             });
         }
         // Remove the old label (if requested)
-        const shouldRemoveOldLabel = coreExports.getInput('remove-old-label') === 'true';
+        const shouldRemoveOldLabel = coreExports.getInput('remove-existing') === 'true';
         console.log(`Should remove the old label: ${shouldRemoveOldLabel}`);
         if (shouldRemoveOldLabel) {
             console.log(`Removing the old label from the issues...`);
